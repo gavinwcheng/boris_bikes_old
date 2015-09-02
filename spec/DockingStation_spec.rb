@@ -3,7 +3,10 @@ require 'spec_helper'
 
 describe DockingStation do
   it "returns a Docing Station object" do
-  expect(DockingStation.new(1,2)).to be_an_instance_of DockingStation
+    expect(DockingStation.new()).to be_an_instance_of DockingStation
+  end
+  it "responds to a request to release a bike" do
+    expect(subject).to respond_to :release_bike
   end
 end
 
