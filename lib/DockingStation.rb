@@ -1,3 +1,5 @@
+require_relative 'Bike'
+
 class DockingStation
 
   def initialize()
@@ -8,5 +10,6 @@ class DockingStation
   end
 
 end
+
 
 
