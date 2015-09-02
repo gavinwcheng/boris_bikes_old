@@ -5,11 +5,11 @@ class DockingStation
   def initialize()
   end
 
+  def dock(bike)
+  end
+
   def release_bike
-    Bike.new
+    fail 'No bikes available'
   end
 
 end
-
-
-

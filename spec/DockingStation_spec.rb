@@ -5,12 +5,22 @@ describe DockingStation do
   it "returns a Docing Station object" do
     expect(DockingStation.new()).to be_an_instance_of DockingStation
   end
-  it "responds to a request to release a bike" do
-    expect(subject.release_bike).to be_an_instance_of Bike
+  it "produces valid bikes" do
+    bike = subject.release_bike
+    expect(bike).to be_an_instance_of Bike
   end
-  it "responds to a request to release a bike" do
-  expect(subject.release_bike.working?).to be_truthy
+  it "releases working bikes" do
+    bike = subject.release_bike
+    expect(bike).to be_working
   end
+  it { is_expected.to respond_to(:dock).with(1).argument }
+
+  describe '#release_bike' do
+    it 'raises an error when there are no bikes available' do
+      expect { subject.release_bike }.to raise_error 'No bikes available'
+    end
+  end
+
 end
 
 
