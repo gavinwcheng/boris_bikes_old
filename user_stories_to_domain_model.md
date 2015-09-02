@@ -16,3 +16,6 @@ person |
 docking_station | release
 bike | see_if_bike_works
 bike | use
+
+# Diagram
+![diagram](https://github.com/trwh/boris_bikes/blob/master/images/DSC_0001.JPG)
